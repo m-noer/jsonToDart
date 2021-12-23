@@ -272,7 +272,7 @@ $(function () {
 
         lines.push(`@JsonSerializable()`)
         lines.push(`class ${className}Model extends ${className}Entity{`);
-        constructorLines.push(`  const ${className}Entity({\n`);
+        constructorLines.push(`  const ${className}Model({\n`);
 
         // Json
         // lines.push(`/*\r\n${JSON.stringify(jsonObj, null, 2)} \r\n*/\r\n`);
@@ -472,7 +472,7 @@ $(function () {
               jsonKey = `${isJsonKeyPrivate ? '_' : ''}jsonKey${className}${uppercaseFirst(legalKey)}`;
             }
             jsonKeysLines.push(`const String ${jsonKey} = "${key}";`);
-            constructorLines.push(`    this.${legalKey},\n`);
+            constructorLines.push(`    required this.${legalKey},\n`);
             if (element === null) {
               //!显示错误信息
               showInfo(`WARNING : the Property named '${key}' is null,which will be treated as String type`);
