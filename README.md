@@ -2,7 +2,8 @@
 
 online tool for convert json to dart code
 
-click [https://ashamp.github.io/jsonToDartModel/](https://ashamp.github.io/jsonToDartModel/)
+click [https://m-noer.github.io/jsonToDart/](https://m-noer.github.io/jsonToDart/) 
+Custom dart model from [https://ashamp.github.io/jsonToDartModel/](https://ashamp.github.io/jsonToDartModel/)
 
 ## Feature
 - online use, without plugin
