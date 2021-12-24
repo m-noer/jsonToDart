@@ -270,7 +270,7 @@ $(function () {
           className = snakeToCamel(className);
         }
 
-        lines.push(`@JsonSerializable()`)
+        lines.push(`@JsonSerializable(createToJson: false)`)
         lines.push(`class ${className}Model extends ${className}Entity{`);
         constructorLines.push(`  const ${className}Model({\n`);
 
@@ -395,7 +395,6 @@ $(function () {
         lines.push(`  factory ${className}Model.fromJson(Map<String, dynamic> json) =>
         _\$${className}ModelFromJson(json);\n\n`);
 
-        lines.push(`  Map<String, dynamic> toJson() => _\$${className}ModelToJson(this);`);
 
         if (shouldOridJson) {
           lines.push(`  Map<String, dynamic> origJson() => __origJson;`);
